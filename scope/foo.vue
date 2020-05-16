@@ -1,0 +1,22 @@
+<template>
+<div class='foo'>
+  <h1 class='header'>Foo</h1>
+  <p>this is Foo</p>
+</div>
+</template>
+
+<style>
+p {
+  text-decoration: underline;
+}
+</style>
+
+<style scoped>
+.foo {
+  border: solid 1px green;
+  margin: 4px;
+  padding: 4px;
+}
+
+.header { font-size: 150%; }
+</style>
