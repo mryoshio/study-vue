@@ -36,6 +36,10 @@
       nothing
     </li>
   </ul>
+  <h2>Save & Restore</h2>
+  <button type='button' @click='saveMe'>save</button>
+  |
+  <button type='button' @click='restoreMe'>restore</button>
 </div>
 </template>
 
@@ -93,6 +97,14 @@ export default {
       this.$store.commit('changeFilter', {
         filter: labelId
       })
+    },
+    saveMe() {
+      this.$store.dispatch('save')
+      // eslint-disable-next-line
+      console.log('save')
+    },
+    restoreMe() {
+      this.$store.dispatch('restore')
     }
   }
 }
