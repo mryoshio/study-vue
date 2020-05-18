@@ -25,6 +25,17 @@
   <form @submit.prevent='addL'>
     <input type='text' v-model='newLabelText' placeholder='New Label'>
   </form>
+  <h2>FILTER</h2>
+  <ul>
+    <li v-for='label in labels' :key='label.id'>
+      <input type='radio' :checked='label.id === filter' @change='changeF(label.id)'>
+      {{ label.text }}
+    </li>
+    <li>
+      <input type='radio' :checked='filter === null' @change='changeF(null)'>
+      nothing
+    </li>
+  </ul>
 </div>
 </template>
 
@@ -39,10 +50,13 @@ export default {
   },
   computed: {
     tasks() {
-      return this.$store.state.tasks
+      return this.$store.getters.filteredTasks
     },
     labels() {
       return this.$store.state.labels
+    },
+    filter() {
+      return this.$store.state.filter
     }
   },
   methods: {
@@ -71,6 +85,14 @@ export default {
     getLabelText(id) {
       const l = this.labels.filter(label => label.id === id)[0]
       return l ? l.text : ''
+    },
+    changeF(labelId) {
+      // eslint-disable-next-line
+      console.log('changeF', labelId)
+
+      this.$store.commit('changeFilter', {
+        filter: labelId
+      })
     }
   }
 }
