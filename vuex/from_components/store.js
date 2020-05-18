@@ -8,7 +8,7 @@ const store = new Vuex.Store({
     count: 1
   },
   mutations: {
-    increment(state, { val }) {
+    increment(state, val) {
       // eslint-disable-next-line
       console.log('increment', val)
 
