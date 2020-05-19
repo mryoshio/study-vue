@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import 'es-6-promise/auto'
+import 'es6-promise/auto'
 import App from './App'
 import router from './router'
 import store from './store'
