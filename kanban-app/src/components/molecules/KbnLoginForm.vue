@@ -1,5 +1,5 @@
 <template>
-  <form novalidate>
+<form novalidate>
     <div class="form-item">
       <label for="email">メールアドレス</label>
       <input
