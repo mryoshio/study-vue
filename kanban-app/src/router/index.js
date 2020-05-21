@@ -5,7 +5,7 @@ import { authorizeToken } from './guards'
 
 Vue.use(Router)
 
-const router = Router({ routes })
+const router = new Router({ routes })
 router.beforeEach(authorizeToken)
 
 export default router
