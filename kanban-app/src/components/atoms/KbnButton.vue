@@ -18,13 +18,13 @@ export default {
     }
   },
   computed: {
-    classes() {
+    classes () {
       const cls = this.type === 'text' ? ('-' + this.type) : ''
       return [`kbn-button${cls}`]
     }
   },
   methods: {
-    handleClick(ev) {
+    handleClick (ev) {
       this.$emit('click', ev)
     }
   }
