@@ -1,0 +1,6 @@
+export const AUTH_LOGIN = 'auth_login'
+export const FETCH_ALL_TASK_LIST = 'fetch_all_task_list'
+export const ADD_TASK = 'add_task'
+export const UPDATE_TASK = 'update_task'
+export const REMOVE_TASK = 'remove_task'
+export const AUTH_LOGOUT = 'auth_logout'
