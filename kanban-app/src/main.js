@@ -9,6 +9,11 @@ import ErrorBoundary from './ErrorBoundary'
 Vue.config.productionTip = false
 
 Vue.component(ErrorBoundary.name, ErrorBoundary)
+Vue.config.errorHandler = (err, vm, info) => {
+  console.error('global error:', err)
+  console.error('global error:', vm)
+  console.error('global error:', info)
+}
 
 /* eslint-disable no-new */
 new Vue({
