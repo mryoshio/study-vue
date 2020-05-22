@@ -7,6 +7,7 @@ import store from './store'
 import ErrorBoundary from './ErrorBoundary'
 
 Vue.config.productionTip = false
+Vue.config.performance = true
 
 Vue.component(ErrorBoundary.name, ErrorBoundary)
 Vue.config.errorHandler = (err, vm, info) => {
